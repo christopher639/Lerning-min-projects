@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom projects</title>
+</head>
+<body>
+   <style>
+  
+   </style>
+
+  <div class="projects-container">
+    <div class="amazon">
+        <p>You Tube subscription</p>
+        <button class="js-sub-btn">subscribe</button>
+        <p>Amazon Shipping calculator</p>
+        <p>Orders under Ksh40  = + ksh10 for shipping</p>
+        <p>Orders over Ksh40  = free shipping</p>
+        <input type="number" class="js-cost-input" placeholder="Cost of order">
+        <button class="btn-cal" onkeydown="entershotcut(event);">Calculate</button>
+        <p class="total"></p>
+    
+       </div>
+       <div class="amazon">
+         <p>Todo Tasks</p>
+         <div class="todo-input-grid">
+                <input type="text" placeholder="Todo Name" class="js-input">
+                <input type="date" class="js-due-date-input" >
+                <button  class="add" onclick=" addTodo()">Add</button>
+        </div>
+         <div class="js-todo-list todo-grid"></div>
+       </div>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
