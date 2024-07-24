@@ -33,20 +33,12 @@ function subscribe(){
                 calculateTotal();
             }
         }
-
-
-
-
-
-
-
-
   const todoList =[{
-    name:'cook',
+    name:'New Skill',
     deudate:'2024-7-23'
   },
 {
-  name:'fuck',
+  name:'Code deploy ',
   deudate:'2024-7-23'
 }];//empty array
 
@@ -58,6 +50,7 @@ function subscribe(){
        //  const name  =todoObject.name;
       //   const deudate = todoObject.deudate;
          const {name ,deudate} = todoObject;
+         
          const html = `
          <div>  ${name} </div>
          <div>    ${deudate} </div>
@@ -79,13 +72,17 @@ function subscribe(){
      const name= inputElement.value;
      const dateIjnputElement = document.querySelector('.js-due-date-input');
      const deudate =dateIjnputElement.value;
-     todoList.push({
-    //  name:name,
-    //  deudate:deudate,
-      name,
-      deudate
-     });
-     inputElement.value='';
-     renderTodoList();
-
+     if(name!=='' && deudate !==''){
+      todoList.push({
+        //  name:name,
+        //  deudate:deudate,
+          name,
+          deudate
+         });
+         inputElement.value='';
+         renderTodoList();
+     }else   if(name==='' || deudate ===''){
+     alert('Provide Name and date');
+     }
+    
   }
